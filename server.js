@@ -10,8 +10,12 @@ app.use(bodyParser.json());
 // Parse request of content type application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}));
 
-const db = require('./model');
-db.sequelize.sync();
+// const db = require('./model');
+// db.sequelize.sync();
+
+// Routers
+const productRouter = require('./routes/productRouter.js')
+app.use("/api", productRouter)
 
 // Simple route
 app.get('/', (req, res) => {

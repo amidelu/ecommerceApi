@@ -13,6 +13,12 @@ module.exports = (sequelize, Sequelize) => {
         },
         discount: {
             type: Sequelize.DOUBLE
+        },
+        category: {
+            type: Sequelize.STRING
+        },
+        subCategory: {
+            type: Sequelize.STRING
         }
     });
 
